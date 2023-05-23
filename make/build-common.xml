@@ -157,6 +157,9 @@
         <condition property="swt.jar" value="${project.root}/make/lib/swt/gtk-linux-x86_64/swt.jar">
           <istrue value="${isLinuxAMD64}" />
         </condition>
+        <condition property="swt.jar" value="${project.root}/make/lib/swt/gtk-linux-ppc64le/swt.jar">
+          <istrue value="${isLinuxPpc64le}" />
+        </condition>
         <condition property="swt.jar" value="${project.root}/make/lib/swt/gtk-linux-x86_64/swt.jar">
           <or>
               <istrue value="${isWindowsX86}" /> <!-- FIXME JAU .. hack -->
@@ -211,6 +214,7 @@
                   <istrue value="${isWindowsAMD64}" />
                   <istrue value="${isWindowsX86}" />
                   <istrue value="${isLinuxAMD64}" />
+                  <istrue value="${isLinuxPpc64le}" />
                   <istrue value="${isLinuxX86}" />
                   <istrue value="${isOSX}" />
                   <istrue value="${isSolarisX86}" />
